@@ -56,7 +56,7 @@ export const PALETTES: Palette[] = FAMILIES.flatMap((family) =>
   })),
 );
 
-export const DEFAULT_PALETTE_ID = "nebula-azure";
+export const DEFAULT_PALETTE_ID = "mono-cyan";
 
 const ok = (l: number, c: number, h: number, a?: number) =>
   `oklch(${l.toFixed(3)} ${c.toFixed(3)} ${(((h % 360) + 360) % 360).toFixed(1)}${a !== undefined ? ` / ${a}` : ""})`;

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Code2, ImageIcon, LayoutDashboard, Menu, MessageSquare, PanelLeftClose, PanelLeftOpen, X } from "lucide-react";
+import { Code2, ImageIcon, LayoutDashboard, Menu, MessageSquare, PanelLeftClose, PanelLeftOpen, Settings, X } from "lucide-react";
 import { OperaLogoMark } from "@/components/brand/OperaLogoMark";
 import { UserAvatar } from "@/components/profile/UserAvatar";
 import { Button } from "@/components/ui/button";
@@ -54,7 +54,11 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
     {mobileOpen && <button type="button" className="fixed inset-0 z-40 bg-background/75 backdrop-blur-sm md:hidden" aria-label={t("Close menu", "إغلاق القائمة")} onClick={() => setMobileOpen(false)} />}
     <div className={`fixed inset-y-0 z-50 transition-transform md:static md:translate-x-0 ${lang === "ar" ? "right-0" : "left-0"} ${mobileOpen ? "translate-x-0" : lang === "ar" ? "translate-x-full" : "-translate-x-full"}`}>{sidebar}</div>
     <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
-      <header className="flex h-14 shrink-0 items-center gap-3 border-b border-border bg-card px-3 md:hidden"><Button variant="ghost" size="icon" onClick={() => setMobileOpen(true)} aria-label={t("Open menu", "فتح القائمة")}><Menu /></Button><span className="font-display text-sm font-bold">Opera AI</span></header>
+      <header className="flex h-16 shrink-0 items-center justify-between px-3 md:hidden">
+        <Button variant="ghost" size="icon" className="rounded-full" onClick={() => setMobileOpen(true)} aria-label={t("Open menu", "فتح القائمة")}><Menu /></Button>
+        <span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold uppercase text-secondary-foreground">Free</span>
+        <Button asChild variant="ghost" size="icon" className="rounded-full"><Link to="/dashboard" aria-label={t("Settings", "الإعدادات")}><Settings /></Link></Button>
+      </header>
       <main className="min-h-0 flex-1 overflow-auto">{children}</main>
     </div>
   </div>;

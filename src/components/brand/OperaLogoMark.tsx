@@ -1,3 +1,5 @@
+import logoAsset from "@/assets/opera-ai-mark.png.asset.json";
+
 type OperaLogoMarkProps = {
   className?: string;
   label?: string;
@@ -6,15 +8,11 @@ type OperaLogoMarkProps = {
 
 export function OperaLogoMark({ className = "h-10 w-10", label, animated = true }: OperaLogoMarkProps) {
   return (
-    <span
-      className={`opera-logo-mark ${animated ? "opera-logo-mark--animated" : ""} ${className}`}
-      role={label ? "img" : undefined}
-      aria-label={label}
+    <img
+      src={logoAsset.url}
+      className={`object-contain drop-shadow-[0_0_18px_color-mix(in_oklab,var(--primary)_35%,transparent)] ${animated ? "transition-transform duration-300 hover:scale-105" : ""} ${className}`}
+      alt={label ?? ""}
       aria-hidden={label ? undefined : true}
-    >
-      <span className="opera-logo-ring opera-logo-ring--outer" />
-      <span className="opera-logo-ring opera-logo-ring--inner" />
-      <span className="opera-logo-core" />
-    </span>
+    />
   );
 }
