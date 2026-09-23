@@ -1,0 +1,103 @@
+{
+  "source": "https://github.com/GRYKJ249/secure-cloud-notes.git",
+  "capabilities": [
+    {
+      "capability": "application code",
+      "source": "GitHub repository",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schema",
+      "source": "no application schema detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "records",
+      "source": "browser-local conversations",
+      "outcome": "preserve browser storage behavior",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "authentication identities",
+      "source": "no accounts; local visitor identity",
+      "outcome": "preserve account-free access",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "authorization",
+      "source": "no protected cloud records",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "uploaded file bytes",
+      "source": "none in repository",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "external providers",
+      "source": "Lovable AI endpoints",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "public endpoints",
+      "source": "chat and image generation API routes",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "callbacks",
+      "source": "none detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "webhooks",
+      "source": "none detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schedules",
+      "source": "none detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": "none declared",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "cutover",
+      "source": "root landing page",
+      "outcome": "redirect root directly to chat",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "verification",
+      "source": "local preview",
+      "outcome": "root redirects to the redesigned mobile chat screen with no browser errors",
+      "status": "verified",
+      "next_action": "none"
+    }
+  ]
+}
